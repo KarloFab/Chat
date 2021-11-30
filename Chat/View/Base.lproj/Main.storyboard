@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Zej-ei-jRZ"/>
                     <connections>
+                        <outlet property="titleLabel" destination="X5V-dZ-w7M" id="Dti-OB-1uM"/>
                         <segue destination="I2H-go-5W2" kind="show" id="5co-LR-ZU9"/>
                         <segue destination="Mwi-2T-b6i" kind="show" id="ZBJ-VN-ewx"/>
                     </connections>
