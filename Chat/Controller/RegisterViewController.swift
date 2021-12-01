@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import Firebase
 
 class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        FirebaseApp.configure()
     }
 
 }
