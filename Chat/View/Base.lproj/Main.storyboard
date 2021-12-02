@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5V-dZ-w7M" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="128.33333333333337" y="392" width="133.66666666666663" height="60"/>
+                                <rect key="frame" x="195" y="422" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +43,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="I2H-go-5W2" kind="show" id="nhr-fd-iyq"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvQ-ty-M03">
                                         <rect key="frame" x="45" y="58" width="300" height="50"/>
@@ -62,6 +65,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="Mwi-2T-b6i" kind="show" id="yd3-iC-iUY"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -81,8 +87,6 @@
                     <navigationItem key="navigationItem" id="Zej-ei-jRZ"/>
                     <connections>
                         <outlet property="titleLabel" destination="X5V-dZ-w7M" id="Dti-OB-1uM"/>
-                        <segue destination="I2H-go-5W2" kind="show" id="5co-LR-ZU9"/>
-                        <segue destination="Mwi-2T-b6i" kind="show" id="ZBJ-VN-ewx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -108,7 +112,7 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CFX-Q3-THh">
                                         <rect key="frame" x="0.0" y="58" width="350" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b69-Mu-DZ7">
                                         <rect key="frame" x="0.0" y="116.00000000000001" width="350" height="41.666666666666671"/>
@@ -124,6 +128,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="I2H-go-5W2" eventType="touchUpInside" id="wzN-Bd-eeJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -138,6 +145,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="WF3-Ad-vlb"/>
                     <connections>
+                        <outlet property="emailTextField" destination="fp5-Qs-1Gr" id="GzE-2G-W8a"/>
+                        <outlet property="passwordTextField" destination="CFX-Q3-THh" id="OsY-xA-m9Q"/>
                         <segue destination="IdB-Pb-TSx" kind="show" identifier="RegisterToChat" id="OTB-wG-Zo3"/>
                     </connections>
                 </viewController>
@@ -284,8 +293,11 @@
             <point key="canvasLocation" x="-1229.2307692307693" y="105.92417061611374"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="X5V-dZ-w7M"/>
+    </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="e7r-xe-6Di"/>
+        <segue reference="OTB-wG-Zo3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="paperplane" catalog="system" width="128" height="118"/>
