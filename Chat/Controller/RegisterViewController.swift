@@ -15,8 +15,6 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        FirebaseApp.configure()
     }
     
     @IBAction func registerPressed(_ sender: Any) {
