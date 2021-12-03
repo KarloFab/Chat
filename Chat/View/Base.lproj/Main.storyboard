@@ -273,9 +273,16 @@
                             <constraint firstItem="Txa-gF-VfN" firstAttribute="trailing" secondItem="69t-ic-mcj" secondAttribute="trailingMargin" constant="20" id="oqu-Ri-1J3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="jtJ-rN-ZhL"/>
+                    <navigationItem key="navigationItem" id="jtJ-rN-ZhL">
+                        <barButtonItem key="rightBarButtonItem" title="Log out" id="mZ6-As-aSt">
+                            <connections>
+                                <action selector="logOutPressed:" destination="Ho7-DI-6A0" id="wn8-bV-Kn5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udx-lZ-3tV" sceneMemberID="firstResponder"/>
+                <exit id="Ho7-DI-6A0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2283.0769230769229" y="105.92417061611374"/>
         </scene>
