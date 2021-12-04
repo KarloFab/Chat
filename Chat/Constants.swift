@@ -6,6 +6,9 @@
 //
 
 struct Constants {
+    static let cellIdentifier = "ReusableCell"
+    static let cellNibName = "MessageCell"
     static let registerSegue = "RegisterToChat"
     static let loginToChat = "LoginToChat"
+    static let appTitle = "CHAT"
 }

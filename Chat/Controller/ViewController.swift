@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleLabel.text = "CHAT"
+        titleLabel.text = Constants.appTitle
     }
 
 

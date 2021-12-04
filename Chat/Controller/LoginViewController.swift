@@ -15,10 +15,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationItem.hidesBackButton = true
-        
+    
     }
+    
     @IBAction func loginPressed(_ sender: UIButton) {
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
@@ -28,14 +27,6 @@ class LoginViewController: UIViewController {
                     self.performSegue(withIdentifier: Constants.loginToChat, sender: self)
                 }
             }
-        }
-    }
-    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
-        do{
-            try Auth.auth().signOut()
-            navigationController?.popToRootViewController(animated: true)
-        } catch let signOutError as NSError {
-                print("Error signing out: \(signOutError)")
         }
     }
     

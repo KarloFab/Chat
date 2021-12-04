@@ -228,7 +228,7 @@
                                 <rect key="frame" x="0.0" y="88" width="390" height="660"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Pmu-RZ-eT3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="Pmu-RZ-eT3">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pmu-RZ-eT3" id="vqm-ky-Z5v">
@@ -257,6 +257,9 @@
                                         <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system">
                                             <attributedString key="attributedTitle"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="sendPressed:" destination="IdB-Pb-TSx" eventType="touchUpInside" id="5bI-Fw-5RN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -276,13 +279,16 @@
                     <navigationItem key="navigationItem" id="jtJ-rN-ZhL">
                         <barButtonItem key="rightBarButtonItem" title="Log out" id="mZ6-As-aSt">
                             <connections>
-                                <action selector="logOutPressed:" destination="Ho7-DI-6A0" id="wn8-bV-Kn5"/>
+                                <action selector="logOutPressed:" destination="IdB-Pb-TSx" id="I0d-lb-Cm9"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="messageTextField" destination="hgQ-MX-Hls" id="TaZ-g1-cXz"/>
+                        <outlet property="tableView" destination="V1t-gc-oOm" id="l5j-rC-Nu6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udx-lZ-3tV" sceneMemberID="firstResponder"/>
-                <exit id="Ho7-DI-6A0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2283.0769230769229" y="105.92417061611374"/>
         </scene>
