@@ -11,4 +11,11 @@ struct Constants {
     static let registerSegue = "RegisterToChat"
     static let loginToChat = "LoginToChat"
     static let appTitle = "CHAT"
+    
+    struct FireStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+        static let dateField = "date"
+    }
 }

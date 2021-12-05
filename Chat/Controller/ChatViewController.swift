@@ -17,10 +17,12 @@ class ChatViewController: UIViewController {
         Message(sender: "a@b.c", body: "Hello"),
         Message(sender: "c@b.c", body: "Hey!")
     ]
-
+    
+    let db = Firestore.firestore()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -30,6 +32,14 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendPressed(_ sender: UIButton) {
+        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+            db.collection(Constants.FireStore.collectionName).addDocument(data: [Constants.FireStore.senderField: messageSender, Constants.FireStore.bodyField: messageBody]) { error in
+                if let e = error {
+                    print ("There was an issue saving data for Firestore, \(e)")
+                } else {
+                    print("Success")
+                }
+            }        }
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -37,7 +47,7 @@ class ChatViewController: UIViewController {
             try Auth.auth().signOut()
             navigationController?.popToRootViewController(animated: true)
         } catch let signOutError as NSError {
-                print("Error signing out: \(signOutError)")
+            print("Error signing out: \(signOutError)")
         }
     }
 }
