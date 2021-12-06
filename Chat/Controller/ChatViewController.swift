@@ -44,7 +44,9 @@ class ChatViewController: UIViewController {
                             let message = Message(sender: sender, body: body)
                             self.messages.append(message)
                             
-                            self.tableView.reloadData()
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 }
