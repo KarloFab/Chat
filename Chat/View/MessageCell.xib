@@ -19,26 +19,37 @@
                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="LvP-kG-g1S">
                         <rect key="frame" x="10" y="10" width="326" height="52"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-oK-i6j">
-                                <rect key="frame" x="10" y="10" width="41.5" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.diamond.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-Qe-AEq">
-                                <rect key="frame" x="286" y="5.5" width="40" height="41.5"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-Qe-AEq">
+                                <rect key="frame" x="0.0" y="5" width="40" height="41"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ux8-Ri-ho2"/>
                                     <constraint firstAttribute="width" constant="40" id="wUf-bW-wyT"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFf-oK-i6j">
+                                <rect key="frame" x="130" y="10" width="41.5" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="CU8-hL-nhw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.diamond.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-EG-op3">
+                                <rect key="frame" x="286" y="5.5" width="40" height="41.5"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Ob7-3b-dl5"/>
+                                    <constraint firstAttribute="height" constant="40" id="RDu-Vm-Nhq"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="oFf-oK-i6j" firstAttribute="top" secondItem="LvP-kG-g1S" secondAttribute="top" constant="10" id="C9p-Zg-t12"/>
-                            <constraint firstItem="yLk-Qe-AEq" firstAttribute="leading" secondItem="oFf-oK-i6j" secondAttribute="trailing" constant="10" id="Xkn-pU-9ZI"/>
                             <constraint firstAttribute="bottom" secondItem="oFf-oK-i6j" secondAttribute="bottom" constant="10" id="bSk-o4-47f"/>
-                            <constraint firstItem="oFf-oK-i6j" firstAttribute="leading" secondItem="LvP-kG-g1S" secondAttribute="leading" constant="10" id="nW5-mx-cub"/>
+                            <constraint firstItem="jrB-EG-op3" firstAttribute="leading" secondItem="oFf-oK-i6j" secondAttribute="trailing" constant="8" symbolic="YES" id="ixe-uZ-KbM"/>
+                            <constraint firstItem="oFf-oK-i6j" firstAttribute="leading" secondItem="yLk-Qe-AEq" secondAttribute="leading" constant="130" id="nW5-mx-cub"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -59,5 +70,6 @@
     </objects>
     <resources>
         <image name="questionmark.diamond.fill" catalog="system" width="128" height="122"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
     </resources>
 </document>
